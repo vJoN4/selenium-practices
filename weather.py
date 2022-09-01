@@ -18,17 +18,8 @@ location.click()
 
 time.sleep(3)
 
-li_list = _Driver.find_elements(By.TAG_NAME, 'li')
-by_hours = None
-
-for li in li_list:
-  if (li.text == 'Por horas'):
-    by_hours = li
-
-if (by_hours != None):
-  by_hours.click()
-else:
-  print("Not found")
+by_hours = _Driver.find_element(By.XPATH, '/html/body/div[5]/div/div[4]/div/section[4]/section/div/article/section/ul/li[2]')
+by_hours.click()
 
 time.sleep(3)
 
